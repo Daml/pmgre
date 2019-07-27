@@ -1,0 +1,10 @@
+<osm-script output="csv" output-config="(::type,::id,::lat,::lon,::version,::timestamp,::changeset,::uid,::user,telecom,operator,ref,&quot;ref:FR:ARCEP&quot;,&quot;telecom:medium&quot;)">
+  <id-query type="area" ref="3600007437" into="isere"/>
+  <union into="_">
+    <query into="_" type="node">
+      <has-kv k="ref:FR:ARCEP" modv="" v=""/>
+      <area-query from="isere"/>
+    </query>
+  </union>
+  <print e="" from="_" geometry="center" ids="yes" limit="" mode="meta" n="" order="id" s="" w=""/>
+</osm-script>
